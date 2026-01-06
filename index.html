@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>STRUCTURE ENGINEERING SERVICE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;font-family:Arial;background:#0f172a;color:#e5e7eb}
+.container{max-width:900px;margin:auto;padding:40px}
+.card{background:#020617;padding:25px;border-radius:16px;margin-bottom:20px}
+input,textarea{width:100%;padding:10px;margin-top:8px;background:#020617;border:1px solid #334155;color:white;border-radius:8px}
+button{padding:10px 16px;border:none;border-radius:8px;cursor:pointer}
+.primary{background:#2563eb;color:white}
+.green{background:#16a34a;color:white}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<div id="login" class="container">
+  <div class="card">
+    <h2>Admin Login</h2>
+    <input type="password" id="pass" placeholder="Password">
+    <button class="primary" onclick="login()">Login</button>
+  </div>
+</div>
+<div id="site" class="container hidden">
+  <div class="card">
+    <h1>STRUCTURE ENGINEERING SERVICE</h1>
+    <textarea id="hero"></textarea>
+    <button class="primary">Contact Us</button>
+    <button>Download CV</button>
+    <a href="https://wa.me/201101558546"><button class="green">WhatsApp</button></a>
+  </div>
+  <div class="card">
+    <h2>About Us</h2>
+    <textarea id="about"></textarea>
+  </div>
+  <div class="card">
+    <h2>Contact</h2>
+    <p>WhatsApp: 01101558546</p>
+  </div>
+</div>
+<script>
+const PASSWORD="admin123";
+hero.value=localStorage.hero||"Professional Structural Engineering Solutions";
+about.value=localStorage.about||"Structural analysis and design according to international codes.";
+hero.oninput=()=>localStorage.hero=hero.value;
+about.oninput=()=>localStorage.about=about.value;
+function login(){
+ if(pass.value===PASSWORD){
+   loginDiv.style.display="none";
+   site.classList.remove("hidden");
+ }
+}
+const loginDiv=document.getElementById("login");
+const site=document.getElementById("site");
+</script>
+</body>
+</html>
