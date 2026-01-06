@@ -91,7 +91,7 @@ about.oninput=()=>localStorage.about=about.value;
 
 // Projects Section
 const projectsDiv=document.getElementById("projects");
-let projects=JSON.parse(localStorage.projects||"[]");
+let projects=JSON.parse(localStorage.projects||'["Residential Tower Project","Downtown Office Complex","Industrial Plant Framework","Bridge Load Assessment"]');
 function renderProjects(){
   projectsDiv.innerHTML="";
   projects.forEach((p,i)=>{
@@ -109,7 +109,7 @@ renderProjects();
 
 // Services Section
 const servicesDiv=document.getElementById("services");
-let services=JSON.parse(localStorage.services||"[]");
+let services=JSON.parse(localStorage.services||'["Structural Analysis & Design","Reinforcement Detailing","Foundation Design","Optimization & Review"]');
 function renderServices(){
   servicesDiv.innerHTML="";
   services.forEach((s,i)=>{
